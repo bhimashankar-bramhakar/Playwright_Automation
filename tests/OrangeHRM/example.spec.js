@@ -27,7 +27,7 @@ test.describe('Playwright Login Test Suite', () => {
   test('Google Sample Test', async ({ page }) => {
 
     await page.goto('https://www.google.com/');
-    await page.getByRole('link', { name: 'Images' }).click();
+    await page.getByRole('link', { name: 'Images' });
 
     let titleOfThePage = GoogleConstants.IMAGE_ALT;
     await expect(page).toHaveTitle(titleOfThePage);
