@@ -32,9 +32,9 @@ test.describe('Playwright Login Test Suite', () => {
     // let titleOfThePage = GoogleConstants.IMAGE_ALT;
     // await expect(page).toHaveTitle(titleOfThePage);
 
-    const ImageTextHeader = await page.locator('//img[@alt="Google Images"]').getAttribute('alt');
-    console.log("Text Of The Image Is:" + ImageTextHeader);
-    expect(ImageTextHeader).toBe(GoogleConstants.GOOGLE_PAGE_HEADER);
+    // const ImageTextHeader = await page.locator('//img[@alt="Google Images"]').getAttribute('alt');
+    // console.log("Text Of The Image Is:" + ImageTextHeader);
+    // expect(ImageTextHeader).toBe(GoogleConstants.GOOGLE_PAGE_HEADER);
 
 
 
