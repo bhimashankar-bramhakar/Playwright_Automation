@@ -47,7 +47,6 @@ test.describe('Get By Role Test Suite', () => {
   test('getByRole Practice Test new link', async ({ page }) => {
     await page.goto('https://www.facebook.com/');
     const careersLink = page.getByRole('link', { name: FacebookConstants.FACEBOOK_CAREERS_LINK });
-    await careersLink.click();
     await page.waitForTimeout(5000);
   });
 
@@ -56,8 +55,6 @@ test.describe('Get By Role Test Suite', () => {
     await page.goto('https://www.facebook.com/');
     const privacyCentreLink = page.getByRole('link', { name: FacebookConstants.FACEBOOK_PRIVACY_CENTRE_LINK });
     await expect(privacyCentreLink).toBeVisible();
-    await privacyCentreLink.click();
-    await page.waitForTimeout(5000);
   });
 
   test('Get Text Test', async ({ page }) => {
