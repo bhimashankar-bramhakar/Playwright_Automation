@@ -63,4 +63,6 @@ test(' Verify Country Dropdown Options Individually', async function ({ page }) 
     await dropdown.selectOption({ label: "Argentina" })
     await page.waitForTimeout(2000)
     await expect(dropdown.locator('option:checked')).toHaveText("Argentina")
+    console.log("Login Successfull");
+    
 })
