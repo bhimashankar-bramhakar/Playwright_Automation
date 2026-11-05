@@ -58,3 +58,15 @@ test('File Uploade Usinf filechooser not creating run time', async ({ page }) =>
         buffer: Buffer.from('Shree Swami Samarth')
     })
 })
+
+test('Multiple File Upload Test', async ({ page }) => {
+    await page.goto('https://the-internet.herokuapp.com/upload');
+    const fileInput = page.locator('//input[@type="file"]').nth(0);
+    const filePath = 'TestData/SampleFiles/sample.pdf'
+    const filePath_2 = 'TestData/SampleFiles/sample2.pdf'
+    await fileInput.setInputFiles([
+       filePath
+    ]);
+    await page.click('#file-submit');
+    await expect(page.locator('#uploaded-files')).toBeVisible();
+});

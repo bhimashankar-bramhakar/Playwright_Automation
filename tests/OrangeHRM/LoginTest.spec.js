@@ -9,8 +9,8 @@ test.describe('orange HRM Login Test Suite', () => {
         const titleOfThePage = await page.title();
         console.log('Title: ' + titleOfThePage);
         expect(titleOfThePage).toContain(LoginPageConstants.ORANGE_HRM_TITLE);
-        await page.screenshot({path: 'screenshots/verified_Title_sc.png', fullPage: true});
-        
+        await page.screenshot({ path: 'screenshots/verified_Title_sc.png', fullPage: true });
+
     });
 
     test('Verify Login Title', async function ({ page }) {
@@ -51,4 +51,10 @@ test.describe('orange HRM Login Test Suite', () => {
         });
     });
 
+    test('Verify Login with random  credencials', async function ({ page }) {
+        await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        const timestamp = Date.now();
+        await page.getByRole('textbox', { name: 'Username' }).fill(`Admin${timestamp}`);
+        await page.getByRole('textbox', { name: 'Password' }).fill(`Admin${timestamp}`);
+    });
 });
