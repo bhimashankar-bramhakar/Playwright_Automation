@@ -3,7 +3,6 @@ name: Playwright Regression Pipeline
 
 on:
   workflow_dispatch:
-
 jobs:
   test:
     timeout-minutes: 60
