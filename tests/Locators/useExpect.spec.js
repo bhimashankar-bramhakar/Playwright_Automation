@@ -18,6 +18,6 @@ test.describe('Expect Metho Use Suite', () => {
         expect(name).toContain("Swami")
         expect(name).toBe('Shree Swami Samarth')
         expect(name.startsWith("Shree")).toBeTruthy()
-        expect(name.endsWith("Samarth")).toBeFalsy()
+        expect(name.endsWith("Samarth")).toBeTruthy()
     })
 })
