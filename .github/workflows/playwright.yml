@@ -2,17 +2,6 @@
 name: Playwright Regression Pipeline
 
 on:
-  push:
-    branches:
-      - main
-      - bramha-playwright-develop
-      - bramha-playwright-feature
-
-  pull_request:
-    branches:
-      - main
-      - bramha-playwright-develop
-
   workflow_dispatch:
 
 jobs:
